@@ -2,8 +2,11 @@
 
 patients = ["Thabo", "Itumeleng", "Lerato"]
 
+#All user inputs return "str" values
 name = input("Enter your name: ")
-age = input("How old are you: ")
+# Convert birth_year value to integer
+birth_year = int(input("Which year were you born: "))
+age = 2026 - birth_year
 is_patient = True
 
 if name in patients:
