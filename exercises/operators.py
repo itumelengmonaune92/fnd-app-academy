@@ -21,6 +21,7 @@ YOUR GOAL:
 """
 
 # Using if statements
+# Top to bottom (Sequencial Control Flow)
 height = int(input("Enter height: "))
 with_adult = input(("Are you with an adult: (yes/no)? ")).strip().lower()
 
@@ -36,3 +37,6 @@ else:
     print(True)
 
 # Use boolean expression
+# Inside out (Travesal)
+can_ride = height <= 80 and (height >= 48 or (height >=42 and with_adult == "yes"))
+print(can_ride)
