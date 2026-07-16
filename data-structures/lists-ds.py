@@ -51,3 +51,18 @@ print()
 # Question 6
 inventory.sort()
 print(f"Sorted list: {inventory}\nTotal item: {len(inventory)}")
+
+
+# Use a For Loop print all the item from the inventory
+print("\n=== For Loop ===")
+for item in inventory:
+    print(item)
+
+# Use a while loop to print all the items from the inventory
+print("\n=== while loop ===")
+
+i = 0
+while i < len(inventory):
+    print(inventory[i])
+    i += 1
+print()
