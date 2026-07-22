@@ -35,5 +35,7 @@ print(f"Favorite number datatype:{' '* 5} {type(favourite_num)}")
 print("=" * 45)
 print()
 
+name = "Itumeleng"
+
 
 
