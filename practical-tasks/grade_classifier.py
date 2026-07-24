@@ -9,28 +9,44 @@ use conditionals for all grade and status logic.
 subjects = {}
 # Request student data from user
 student_name = input("Enter student name: ").title()
-subjects['Math'] = float(input("Enter total marks for Math: "))
+subjects['Math   '] = float(input("Enter total marks for Math: "))
 subjects['Science'] = float(input("Enter total marks for Science: "))
 subjects['CompSci'] = float(input("Enter total marks for CompSci: "))
 
 total_average = sum(subjects.values()) / len(subjects)
-print(total_average)
+# Display Student name and report card details
+print()
+print("=" * 45)
+print("STUDENT REPORT CARD - BSc IT (1st Year)")
+print(f"Student Name: {student_name}")
+print("=" * 45)
 
-
-
-for subject in subjects.values():
-    if subject >= 80:
-        print("A")
-    elif subject >= 70 and subjects <=79:
-        print("B")
-    elif subject >= 60 and subjects <=69:
-        print("C")
-    elif subject >= 50 and subjects <=59:
-            print("D")
+# Display student total average and marks for all subjects
+print(f"Total average: {total_average:.2f}%")
+print("=" * 45)
+for subject, marks in subjects.items():
+    if marks >= 80:
+        print(f"{subject}: A ({marks}%)")
+    elif marks >= 70:
+        print(f"{subject}: B ({marks}%)")
+    elif marks >= 60:
+        print(f"{subject}: C ({marks}%)")
+    elif marks >= 50:
+        print(f"{subject}: D ({marks}%)")
     else:
-         print("F")
+        intervene = f"{subject}: F ({marks}%)"
+        if marks < 40:
+            print(f"{intervene} -> (Needs Intervention)")
+        else:
+            print(f"{subject}: F ({marks}%)")
 
+print("=" * 45)
+# Determine student status
 if total_average >= 50:
-    print("Pass")
+    status = "Pass"
+    print(f"Status : {status}")
 else:
-    print("Fail")
+    status = "Fail"
+    print(f"Status : {status}")
+print("=" * 45)
+print()
